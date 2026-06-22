@@ -216,3 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+crop_disease_model.keras
+venv/
+venv311/
+__pycache__/
+*.pyc
