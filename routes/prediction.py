@@ -1,56 +1,22 @@
-from flask import Blueprint, request
-import random
-from database.database import get_connection
+from flask import Blueprint, request, jsonify
+from backend.predict import predict_image
+import os
 
 prediction_bp = Blueprint('prediction', __name__)
 
 @prediction_bp.route('/predict', methods=['POST'])
 def predict():
 
-    if 'image' not in request.files:
-        return {"error": "No image uploaded"}, 400
+    if 'file' not in request.files:
+        return jsonify({"error": "No file uploaded"}), 400
 
-    file = request.files['image']
+    file = request.files['file']
 
-    diseases = [
-        "Tomato Early Blight",
-        "Tomato Late Blight",
-        "Healthy Leaf",
-        "Bacterial Spot",
-        "Leaf Mold"
-    ]
+    upload_path = "temp.jpg"
+    file.save(upload_path)
 
-    disease = random.choice(diseases)
-    confidence = round(random.uniform(85, 99), 2)
+    result = predict_image(upload_path)
 
-    conn = get_connection()
-    cursor = conn.cursor()
+    os.remove(upload_path)
 
-    cursor.execute("""
-    INSERT INTO predictions
-    (image_name, disease_name, confidence)
-    VALUES (?, ?, ?)
-    """, (file.filename, disease, confidence))
-
-    conn.commit()
-    conn.close()
-
-    return {
-        "success": True,
-        "filename": file.filename,
-        "disease": disease,
-        "confidence": confidence
-    }
-@prediction_bp.route('/history', methods=['GET'])
-def history():
-
-    conn = sqlite3.connect('database/crop.db')
-    cursor = conn.cursor()
-
-    cursor.execute("SELECT * FROM predictions")
-
-    rows = cursor.fetchall()
-
-    conn.close()
-
-    return {"history": rows}
+    return jsonify(result)
