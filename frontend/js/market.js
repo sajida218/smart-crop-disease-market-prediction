@@ -1,0 +1,3 @@
+const API='http://127.0.0.1:8000/api/v1/market';
+fetch(API+'/crops').then(r=>r.json()).then(a=>{crop.innerHTML=a.map(x=>`<option>${x}</option>`).join('');load();});
+async function load(){let c=crop.value;let p=await fetch(API+'/predict?crop='+encodeURIComponent(c)).then(r=>r.json());let h=await fetch(API+'/history?crop='+encodeURIComponent(c)).then(r=>r.json());cards.innerHTML=`<div>Today ₹${p.today}</div><div>Predicted ₹${p.predicted}</div><div>${p.trend}</div><div>${p.recommendation}</div>`;new Chart(chart,{type:'line',data:{labels:h.labels,datasets:[{label:c,data:h.prices}]}});}

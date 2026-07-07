@@ -1,0 +1,58 @@
+[
+    {
+        "timestamp": "2026-06-26 19:03:30",
+        "image": "6958e59c-71d0-4cfe-b296-b0fb8836539f.webp",
+        "crop": "Bell Pepper",
+        "disease": "Healthy",
+        "confidence": 94.93
+    },
+    {
+        "timestamp": "2026-06-26 19:28:24",
+        "image": "b8efede9-6133-4c2b-b8da-14ccc7ab63f3.webp",
+        "crop": "Bell Pepper",
+        "disease": "Healthy",
+        "confidence": 94.93
+    },
+    {
+        "timestamp": "2026-06-26 19:42:40",
+        "image": "df23eb1f-ba7b-46c3-a79f-308c53e068f1.webp",
+        "crop": "Bell Pepper",
+        "disease": "Healthy",
+        "confidence": 94.93
+    },
+    {
+        "timestamp": "2026-07-06 21:52:35",
+        "image": "aa8813ca-fbdc-4b53-8507-3c50c87a0bfe.webp",
+        "crop": "Bell Pepper",
+        "disease": "Healthy",
+        "confidence": 94.93
+    },
+    {
+        "timestamp": "2026-07-07 06:36:09",
+        "image": "f4da54c8-2e6d-4ef3-9877-c39f5687d4b6.webp",
+        "crop": "Bell Pepper",
+        "disease": "Healthy",
+        "confidence": 94.75
+    },
+    {
+        "timestamp": "2026-07-07 08:25:36",
+        "image": "c9e86675-c2a5-4f9e-a674-74a9ba424577.webp",
+        "crop": "Bell Pepper",
+        "disease": "Healthy",
+        "confidence": 94.75
+    },
+    {
+        "timestamp": "2026-07-07 18:27:59",
+        "image": "78a7f725-fcfa-4b43-9721-84b4922573ed.webp",
+        "crop": "Bell Pepper",
+        "disease": "Healthy",
+        "confidence": 94.99
+    },
+    {
+        "timestamp": "2026-07-07 18:54:47",
+        "image": "47986549-cc9d-469f-b0bf-4846d9fea1c1.webp",
+        "crop": "Bell Pepper",
+        "disease": "Healthy",
+        "confidence": 94.99
+    }
+]

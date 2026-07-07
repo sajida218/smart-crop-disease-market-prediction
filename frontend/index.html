@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AgroVision AI - Sprint 3.4</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header class="navbar">
+<div class="logo">🌱 AgroVision AI</div>
+<nav>
+<a href="#dashboard">Dashboard</a>
+<a href="#analytics">Analytics</a>
+<a href="#market">Market</a>
+<a href="#forecast">Forecast</a>
+<a href="#history">History</a>
+</nav>
+</header>
+
+<main class="container" id="dashboard">
+
+<section class="hero">
+<h1>Smart Crop Disease Prediction & Market Intelligence</h1>
+<p>AI-powered disease detection with market forecasting.</p>
+</section>
+
+<section class="stats">
+<div class="card stat-card"><h2 id="total">0</h2><span>Total Predictions</span></div>
+<div class="card stat-card"><h2 id="healthy">0</h2><span>Healthy</span></div>
+<div class="card stat-card"><h2 id="diseased">0</h2><span>Diseased</span></div>
+<div class="card stat-card"><h2 id="confidence">0%</h2><span>Average Confidence</span></div>
+</section>
+
+<section class="grid">
+<div class="card">
+<h2>📷 Upload Plant Image</h2>
+<input id="imageInput" type="file" accept="image/*">
+<img id="preview">
+<button id="predictBtn">Analyze Plant</button>
+</div>
+
+<div class="card">
+<h2>🤖 Prediction Report</h2>
+<div id="predictionCard">Select an image to begin.</div>
+</div>
+</section>
+
+<section class="grid" id="analytics">
+<div class="card">
+<h2>Disease Distribution</h2>
+<canvas id="diseaseChart"></canvas>
+</div>
+<div class="card">
+<h2>Crop Distribution</h2>
+<canvas id="cropChart"></canvas>
+</div>
+</section>
+
+<section class="card" id="market">
+<h2>🌾 Market Intelligence</h2>
+
+<div class="market-grid">
+<div class="market-card"><p>Current Price</p><h3 id="currentPrice">₹0</h3><small id="priceChange">▲0%</small></div>
+<div class="market-card"><p>Tomorrow Price</p><h3 id="predictedPrice">₹0</h3></div>
+<div class="market-card"><p>Weekly Average</p><h3 id="weeklyAverage">₹0</h3></div>
+<div class="market-card"><p>Trend</p><h3 id="marketTrend">-</h3></div>
+<div class="market-card recommendation"><p>Recommendation</p><h3 id="recommendation">Waiting...</h3></div>
+</div>
+
+<div class="grid">
+<div class="card">
+<h3>📈 Price Trend</h3>
+<canvas id="marketChart"></canvas>
+</div>
+
+<div class="card">
+<h3>🏪 Top Markets</h3>
+<table id="topMarketsTable">
+<thead><tr><th>Market</th><th>Price</th></tr></thead>
+<tbody>
+<tr><td>Guntur</td><td id="m1">-</td></tr>
+<tr><td>Vijayawada</td><td id="m2">-</td></tr>
+<tr><td>Kurnool</td><td id="m3">-</td></tr>
+<tr><td>Warangal</td><td id="m4">-</td></tr>
+<tr><td>Hyderabad</td><td id="m5">-</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<section class="grid" id="forecast">
+<div class="card">
+<h2>📅 7-Day Forecast</h2>
+<div id="forecastCards">
+<div class="forecast-box">Day 1 <span id="day1">-</span></div>
+<div class="forecast-box">Day 2 <span id="day2">-</span></div>
+<div class="forecast-box">Day 3 <span id="day3">-</span></div>
+<div class="forecast-box">Day 4 <span id="day4">-</span></div>
+<div class="forecast-box">Day 5 <span id="day5">-</span></div>
+<div class="forecast-box">Day 6 <span id="day6">-</span></div>
+<div class="forecast-box">Day 7 <span id="day7">-</span></div>
+</div>
+</div>
+
+<div class="card">
+<h2>💰 Profit Estimator</h2>
+<label>Quantity (kg)</label>
+<input id="quantityInput" type="number" placeholder="Enter quantity">
+<button id="estimateBtn">Estimate Revenue</button>
+<h3 id="estimatedRevenue">₹0</h3>
+</div>
+</section>
+
+<section class="card" id="history">
+<h2>Prediction History</h2>
+<table id="historyTable">
+<thead><tr><th>Crop</th><th>Disease</th><th>Confidence</th></tr></thead>
+<tbody></tbody>
+</table>
+</section>
+
+<footer>
+<p>© 2026 AgroVision AI • Sprint 3.4</p>
+</footer>
+
+<script src="js/app.js"></script>
+</main>
+</body>
+</html>

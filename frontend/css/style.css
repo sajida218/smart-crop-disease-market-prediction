@@ -1,0 +1,40 @@
+/* AgroVision AI Sprint 3.4 */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#eef6ef;color:#263238;line-height:1.5}
+.navbar{position:sticky;top:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:18px 40px;background:#2e7d32;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.15)}
+.logo{font-size:28px;font-weight:700}
+.navbar a{color:#fff;text-decoration:none;margin-left:18px;font-weight:600}
+.navbar a:hover{opacity:.85}
+.container{max-width:1350px;margin:auto;padding:24px}
+.hero{background:linear-gradient(135deg,#2e7d32,#43a047);color:#fff;padding:36px;border-radius:18px;margin-bottom:24px}
+.hero h1{font-size:2.2rem}
+.stats,.market-grid,.grid{display:grid;gap:20px}
+.stats{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-bottom:24px}
+.grid{grid-template-columns:repeat(auto-fit,minmax(420px,1fr));margin-bottom:24px}
+.card{background:#fff;border-radius:18px;padding:22px;box-shadow:0 6px 18px rgba(0,0,0,.08);transition:.25s}
+.card:hover{transform:translateY(-4px)}
+.stat-card{text-align:center}
+.stat-card h2{color:#2e7d32;font-size:2.4rem}
+input[type=file],input[type=number]{width:100%;padding:12px;border:2px solid #cfe8cf;border-radius:10px;margin:10px 0}
+#preview{width:100%;max-height:320px;object-fit:contain;border-radius:12px;background:#fafafa;margin:10px 0}
+button{background:#43a047;color:#fff;border:none;border-radius:10px;padding:12px 20px;cursor:pointer;font-weight:600}
+button:hover{background:#2e7d32}
+canvas{width:100%!important;height:320px!important}
+.market-grid{grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin:18px 0}
+.market-card{background:#f5fff4;border-left:6px solid #43a047;border-radius:14px;padding:18px;text-align:center}
+.market-card h3{color:#2e7d32;margin-top:8px}
+.market-card small{display:block;margin-top:8px;font-weight:700;color:#1b8d3f}
+.recommendation{background:#e8f5e9}
+#topMarketsTable{width:100%;border-collapse:collapse}
+#topMarketsTable th,#topMarketsTable td,#historyTable th,#historyTable td{padding:12px;border-bottom:1px solid #ddd;text-align:left}
+#topMarketsTable th,#historyTable th{background:#2e7d32;color:#fff}
+.forecast-box{display:flex;justify-content:space-between;align-items:center;background:#f8fff8;border-left:5px solid #43a047;padding:12px;border-radius:10px;margin-bottom:10px;font-weight:600}
+#estimatedRevenue{margin-top:16px;color:#2e7d32;font-size:2rem}
+footer{margin-top:28px;background:#2e7d32;color:#fff;text-align:center;padding:18px}
+@media(max-width:768px){
+.navbar{flex-direction:column;gap:10px}
+.container{padding:14px}
+.hero h1{font-size:1.7rem}
+.grid{grid-template-columns:1fr}
+}
