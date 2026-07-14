@@ -54,5 +54,33 @@
         "crop": "Bell Pepper",
         "disease": "Healthy",
         "confidence": 94.99
+    },
+    {
+        "timestamp": "2026-07-13 16:41:32",
+        "image": "94b4201d-fb03-4888-9443-42eb80805bf5.webp",
+        "crop": "Bell Pepper",
+        "disease": "Healthy",
+        "confidence": 94.93
+    },
+    {
+        "timestamp": "2026-07-13 16:41:32",
+        "image": "c82ebc04-e6fc-4e96-ad7f-5caf3680708a.webp",
+        "crop": "Bell Pepper",
+        "disease": "Healthy",
+        "confidence": 94.93
+    },
+    {
+        "timestamp": "2026-07-13 16:41:32",
+        "image": "efaa97a3-04cc-463e-8dd1-ae7c055d3494.webp",
+        "crop": "Bell Pepper",
+        "disease": "Healthy",
+        "confidence": 94.93
+    },
+    {
+        "timestamp": "2026-07-13 16:41:32",
+        "image": "88dcf4e7-7ca5-41ec-b875-1be4ed83d630.webp",
+        "crop": "Bell Pepper",
+        "disease": "Healthy",
+        "confidence": 94.93
     }
 ]
